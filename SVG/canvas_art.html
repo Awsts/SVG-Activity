@@ -1,0 +1,270 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>8 Canvas Graphical Arts</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f0f0f0;
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .art {
+            background: white;
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        canvas {
+            border: 1px solid black;
+            background: white;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>8 HTML5 Canvas Graphical Arts</h1>
+
+<div class="container">
+
+    <div class="art">
+        <h3>1. Sunrise</h3>
+        <canvas id="art1" width="200" height="200"></canvas>
+    </div>
+
+    <div class="art">
+        <h3>2. House</h3>
+        <canvas id="art2" width="200" height="200"></canvas>
+    </div>
+
+    <div class="art">
+        <h3>3. Flower</h3>
+        <canvas id="art3" width="200" height="200"></canvas>
+    </div>
+
+    <div class="art">
+        <h3>4. Tree</h3>
+        <canvas id="art4" width="200" height="200"></canvas>
+    </div>
+
+    <div class="art">
+        <h3>5. Car</h3>
+        <canvas id="art5" width="200" height="200"></canvas>
+    </div>
+
+    <div class="art">
+        <h3>6. Smiley Face</h3>
+        <canvas id="art6" width="200" height="200"></canvas>
+    </div>
+
+    <div class="art">
+        <h3>7. Boat</h3>
+        <canvas id="art7" width="200" height="200"></canvas>
+    </div>
+
+    <div class="art">
+        <h3>8. Rocket</h3>
+        <canvas id="art8" width="200" height="200"></canvas>
+    </div>
+
+</div>
+
+<script>
+
+// 1. SUNRISE
+let c1 = document.getElementById("art1").getContext("2d");
+
+c1.fillStyle = "skyblue";
+c1.fillRect(0, 0, 200, 200);
+
+c1.fillStyle = "orange";
+c1.beginPath();
+c1.arc(100, 100, 50, 0, Math.PI * 2);
+c1.fill();
+
+c1.fillStyle = "green";
+c1.fillRect(0, 150, 200, 50);
+
+
+// 2. HOUSE
+let c2 = document.getElementById("art2").getContext("2d");
+
+c2.fillStyle = "brown";
+c2.fillRect(45, 85, 110, 90);
+
+c2.fillStyle = "red";
+c2.beginPath();
+c2.moveTo(30, 90);
+c2.lineTo(100, 30);
+c2.lineTo(170, 90);
+c2.closePath();
+c2.fill();
+
+c2.fillStyle = "blue";
+c2.fillRect(85, 125, 30, 50);
+
+
+// 3. FLOWER
+let c3 = document.getElementById("art3").getContext("2d");
+
+c3.fillStyle = "green";
+c3.fillRect(95, 100, 10, 90);
+
+c3.fillStyle = "pink";
+
+for (let i = 0; i < 8; i++) {
+    let angle = i * Math.PI / 4;
+    let x = 100 + Math.cos(angle) * 35;
+    let y = 75 + Math.sin(angle) * 35;
+
+    c3.beginPath();
+    c3.arc(x, y, 18, 0, Math.PI * 2);
+    c3.fill();
+}
+
+c3.fillStyle = "yellow";
+c3.beginPath();
+c3.arc(100, 75, 20, 0, Math.PI * 2);
+c3.fill();
+
+
+// 4. TREE
+let c4 = document.getElementById("art4").getContext("2d");
+
+c4.fillStyle = "brown";
+c4.fillRect(85, 100, 30, 90);
+
+c4.fillStyle = "green";
+
+c4.beginPath();
+c4.arc(100, 75, 50, 0, Math.PI * 2);
+c4.fill();
+
+c4.beginPath();
+c4.arc(65, 100, 30, 0, Math.PI * 2);
+c4.fill();
+
+c4.beginPath();
+c4.arc(135, 100, 30, 0, Math.PI * 2);
+c4.fill();
+
+
+// 5. CAR
+let c5 = document.getElementById("art5").getContext("2d");
+
+c5.fillStyle = "blue";
+c5.fillRect(25, 95, 150, 45);
+
+c5.fillStyle = "skyblue";
+c5.fillRect(60, 65, 80, 35);
+
+c5.fillStyle = "black";
+
+c5.beginPath();
+c5.arc(60, 145, 18, 0, Math.PI * 2);
+c5.fill();
+
+c5.beginPath();
+c5.arc(145, 145, 18, 0, Math.PI * 2);
+c5.fill();
+
+
+// 6. SMILEY FACE
+let c6 = document.getElementById("art6").getContext("2d");
+
+c6.fillStyle = "yellow";
+c6.beginPath();
+c6.arc(100, 100, 75, 0, Math.PI * 2);
+c6.fill();
+
+c6.fillStyle = "black";
+
+c6.beginPath();
+c6.arc(75, 80, 8, 0, Math.PI * 2);
+c6.fill();
+
+c6.beginPath();
+c6.arc(125, 80, 8, 0, Math.PI * 2);
+c6.fill();
+
+c6.beginPath();
+c6.arc(100, 110, 40, 0, Math.PI);
+c6.stroke();
+
+
+// 7. BOAT
+let c7 = document.getElementById("art7").getContext("2d");
+
+c7.fillStyle = "skyblue";
+c7.fillRect(0, 0, 200, 120);
+
+c7.fillStyle = "blue";
+c7.fillRect(0, 120, 200, 80);
+
+c7.fillStyle = "brown";
+c7.beginPath();
+c7.moveTo(30, 120);
+c7.lineTo(170, 120);
+c7.lineTo(140, 165);
+c7.lineTo(60, 165);
+c7.closePath();
+c7.fill();
+
+c7.fillStyle = "red";
+c7.beginPath();
+c7.moveTo(100, 30);
+c7.lineTo(100, 110);
+c7.lineTo(150, 110);
+c7.closePath();
+c7.fill();
+
+
+// 8. ROCKET
+let c8 = document.getElementById("art8").getContext("2d");
+
+c8.fillStyle = "lightblue";
+c8.fillRect(0, 0, 200, 200);
+
+c8.fillStyle = "gray";
+c8.fillRect(75, 65, 50, 85);
+
+c8.fillStyle = "red";
+c8.beginPath();
+c8.moveTo(75, 65);
+c8.lineTo(100, 20);
+c8.lineTo(125, 65);
+c8.closePath();
+c8.fill();
+
+c8.fillStyle = "orange";
+c8.beginPath();
+c8.moveTo(75, 150);
+c8.lineTo(55, 175);
+c8.lineTo(75, 165);
+c8.fill();
+
+c8.beginPath();
+c8.moveTo(125, 150);
+c8.lineTo(145, 175);
+c8.lineTo(125, 165);
+c8.fill();
+
+c8.fillStyle = "yellow";
+c8.beginPath();
+c8.arc(100, 100, 12, 0, Math.PI * 2);
+c8.fill();
+
+</script>
+
+</body>
+</html>
