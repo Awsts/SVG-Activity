@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SVG Graphical Art</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            text-align: center;
+            margin: 20px;
+        }
+        h1 { color: #333; }
+        .art-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .art {
+            background: white;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+        svg {
+            border: 1px solid #ddd;
+            background: #fff;
+        }
+    </style>
+</head>
+<body>
+    <h1>7 SVG Graphical Arts</h1>
+    <div class="art-container">
+
+        <!-- 1. Line and Circle -->
+        <div class="art">
+            <h3>1. Line and Circle</h3>
+            <svg width="200" height="300">
+                <line x1="20" y1="20" x2="180" y2="280" stroke="blue" stroke-width="5"/>
+                <circle cx="100" cy="150" r="55" fill="orange" stroke="black" stroke-width="3"/>
+            </svg>
+        </div>
+
+        <!-- 2. Circle and Rectangle -->
+        <div class="art">
+            <h3>2. Circle and Rectangle</h3>
+            <svg width="200" height="300">
+                <rect x="35" y="70" width="130" height="160" fill="lightblue" stroke="navy" stroke-width="3"/>
+                <circle cx="100" cy="150" r="55" fill="yellow" stroke="orange" stroke-width="3"/>
+            </svg>
+        </div>
+
+        <!-- 3. Polyline and Circle -->
+        <div class="art">
+            <h3>3. Polyline and Circle</h3>
+            <svg width="200" height="300">
+                <polyline points="20,250 50,180 80,220 110,100 150,160 180,40"
+                          fill="none" stroke="green" stroke-width="5"/>
+                <circle cx="100" cy="150" r="45" fill="pink" stroke="red" stroke-width="3"/>
+            </svg>
+        </div>
+
+        <!-- 4. Polygon and Ellipse -->
+        <div class="art">
+            <h3>4. Polygon and Ellipse</h3>
+            <svg width="200" height="300">
+                <polygon points="100,30 170,100 150,200 50,200 30,100"
+                         fill="purple" stroke="black" stroke-width="3"/>
+                <ellipse cx="100" cy="150" rx="65" ry="35" fill="lightyellow" stroke="orange" stroke-width="3"/>
+            </svg>
+        </div>
+
+        <!-- 5. Circle, Line and Rectangle -->
+        <div class="art">
+            <h3>5. Circle, Line and Rectangle</h3>
+            <svg width="200" height="300">
+                <rect x="40" y="60" width="120" height="180" fill="lightgreen" stroke="darkgreen" stroke-width="3"/>
+                <line x1="20" y1="150" x2="180" y2="150" stroke="red" stroke-width="5"/>
+                <circle cx="100" cy="150" r="45" fill="skyblue" stroke="blue" stroke-width="3"/>
+            </svg>
+        </div>
+
+        <!-- 6. Polyline and Polygon -->
+        <div class="art">
+            <h3>6. Polyline and Polygon</h3>
+            <svg width="200" height="300">
+                <polygon points="100,30 170,100 150,200 50,200 30,100"
+                         fill="gold" stroke="orange" stroke-width="3"/>
+                <polyline points="20,250 60,180 100,230 140,170 180,250"
+                          fill="none" stroke="blue" stroke-width="5"/>
+            </svg>
+        </div>
+
+        <!-- 7. Circle, Rectangle, Polyline, Polygon and Ellipse -->
+        <div class="art">
+            <h3>7. All Five Shapes</h3>
+            <svg width="200" height="300">
+                <rect x="30" y="40" width="140" height="220" fill="lightblue" stroke="blue" stroke-width="3"/>
+                <polygon points="100,50 150,110 100,170 50,110" fill="orange" stroke="red" stroke-width="3"/>
+                <ellipse cx="100" cy="150" rx="65" ry="35" fill="pink" stroke="purple" stroke-width="3"/>
+                <polyline points="20,240 60,200 100,250 140,200 180,240" fill="none" stroke="green" stroke-width="4"/>
+                <circle cx="100" cy="110" r="25" fill="yellow" stroke="black" stroke-width="3"/>
+            </svg>
+        </div>
+
+    </div>
+</body>
+</html>
