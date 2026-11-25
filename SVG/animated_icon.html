@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SVG Animated Basketball</title>
+
+    <style>
+        body {
+            background: #eaf0f5;
+            font-family: Arial;
+            text-align: center;
+        }
+
+        .ball {
+            transform-origin: 150px 150px;
+            animation: bounce 1s infinite ease-in-out;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-45px);
+            }
+        }
+
+        .shadow {
+            animation: shadow 1s infinite ease-in-out;
+            transform-origin: center;
+        }
+
+        @keyframes shadow {
+            0%, 100% {
+                transform: scaleX(1);
+                opacity: 0.4;
+            }
+            50% {
+                transform: scaleX(0.6);
+                opacity: 0.15;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>SVG Animated Basketball</h1>
+<p>A bouncing basketball created using SVG animation.</p>
+
+<svg width="300" height="300" viewBox="0 0 300 300">
+
+    <!-- Background -->
+    <rect width="300" height="300" fill="#eaf0f5"/>
+
+    <!-- Shadow -->
+    <ellipse class="shadow"
+        cx="150" cy="260"
+        rx="65" ry="12"
+        fill="gray"/>
+
+    <!-- Basketball -->
+    <g class="ball">
+
+        <circle cx="150" cy="150" r="70"
+            fill="#f58220"
+            stroke="#222"
+            stroke-width="5"/>
+
+        <!-- Basketball Lines -->
+        <path d="M150 80 Q110 150 150 220"
+            fill="none" stroke="#222" stroke-width="5"/>
+
+        <path d="M150 80 Q190 150 150 220"
+            fill="none" stroke="#222" stroke-width="5"/>
+
+        <path d="M80 150 Q150 115 220 150"
+            fill="none" stroke="#222" stroke-width="5"/>
+
+        <path d="M80 150 Q150 185 220 150"
+            fill="none" stroke="#222" stroke-width="5"/>
+
+    </g>
+
+</svg>
+
+</body>
+</html>
